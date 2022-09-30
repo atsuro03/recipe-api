@@ -20,4 +20,8 @@ public class RecipeService {
 	public Recipe save(String menu, String category, String material, String step, String point) {
 		return recipeRepository.save(Recipe.newRecipe(menu, category, material, step, point));
 	}
+	
+	public void delete(Long id) {
+		recipeRepository.findById(id).ifPresent(recipe -> recipeRepository.delete(recipe));
+	}
 }
