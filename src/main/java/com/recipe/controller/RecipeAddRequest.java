@@ -7,6 +7,8 @@ import lombok.Setter;
 @Setter
 public class RecipeAddRequest {
 	
+	private Long id;
+	
 	private String menu;
 	
 	private String category;
@@ -16,4 +18,5 @@ public class RecipeAddRequest {
 	private String step;
 	
 	private String point;
+	
 }

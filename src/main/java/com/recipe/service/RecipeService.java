@@ -21,7 +21,15 @@ public class RecipeService {
 		return recipeRepository.save(Recipe.newRecipe(menu, category, material, step, point));
 	}
 	
+	public Recipe editSave(Long id, String menu, String category, String material, String step, String point) {
+		return recipeRepository.save(Recipe.editRecipe(id, menu, category, material, step, point));
+	}
+	
 	public void delete(Long id) {
 		recipeRepository.findById(id).ifPresent(recipe -> recipeRepository.delete(recipe));
+	}
+	
+	public List<Recipe> displayEdit(List<Long> id) {
+		return recipeRepository.findAllById(id);
 	}
 }

@@ -42,4 +42,15 @@ public class Recipe {
 		recipe.point = point;
 		return recipe;
 	}
+	
+	public static Recipe editRecipe(Long id, String menu, String category, String material, String step, String point) {
+		Recipe recipe = new Recipe();
+		recipe.id = id;
+		recipe.menu = menu;
+		recipe.category = category;
+		recipe.material = material;
+		recipe.step = step;
+		recipe.point = point;
+		return recipe;
+	}
 }
